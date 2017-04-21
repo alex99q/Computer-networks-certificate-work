@@ -1,12 +1,14 @@
-1. Create data input:
+1. IP table generator:
+ - data input
   * read number of departments
   * -//- of PC's
   * -//- of PC's in WLAN
+ - create table (best solution is with matrix)
+  * fields - Device, Interface, Subnet, Ip Address, Subnet Mask, Default Gateway
+ - write alghorithm that filling the tables
   
 2. Types of computer networks:
   - read 1.1 from the assignment
   
 3. Create topology in packet tracer
-
-4. Create IP tables
 

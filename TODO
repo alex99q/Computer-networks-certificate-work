@@ -3,8 +3,6 @@
   * read number of departments
   * -//- of PC's
   * -//- of PC's in WLAN
- - create table (best solution is with matrix)
-  * fields - Device, Interface, Subnet, Ip Address, Subnet Mask, Default Gateway
  - write alghorithm that filling the tables
   
 2. Types of computer networks:
@@ -12,3 +10,8 @@
   
 3. Create topology in packet tracer
 
+DONE:
+[21.4.2017 21:12] - {
+  - create table (best solution is with matrix)
+    * fields - Device, Interface, Subnet, Ip Address, Subnet Mask, Default Gateway
+}

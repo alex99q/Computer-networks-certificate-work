@@ -1,8 +1,4 @@
 1. IP table generator:
- - data input
-  * read number of departments
-  * -//- of PC's
-  * -//- of PC's in WLAN
  - write alghorithm that filling the tables
   
 2. Types of computer networks:
@@ -14,4 +10,11 @@ DONE:
 [21.4.2017 21:12] - {
   - create table (best solution is with matrix)
     * fields - Device, Interface, Subnet, Ip Address, Subnet Mask, Default Gateway
+}
+
+[22.4.2017 21.11] - {
+  - data input
+   * read number of departments
+   * -//- of PC's
+   * -//- of PC's in WLAN
 }

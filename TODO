@@ -1,9 +1,9 @@
 1. IP table generator:
- - write alghorithm that filling the tables
-  
+ - write algorithm that fills the tables in the class NetworkTable
+
 2. Types of computer networks:
   - read 1.1 from the assignment
-  
+
 3. Create topology in packet tracer
 
 DONE:

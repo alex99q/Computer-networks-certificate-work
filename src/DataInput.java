@@ -1,36 +1,34 @@
-import java.util.Hashtable;
 import java.util.Scanner;
 
-public class DataInput {
-    private static Hashtable<String, Integer> inputData = new Hashtable<String, Integer>();
+class DataInput {
+    static int workspaces;
+    static int workspacesOnFirstFloor;
+    static int departmentsOnFirstFloor;
+    static int workspacesOnSecondFloor;
+    static int departmentsOnSecondFloor;
+    static int wifiWorkspaces;
+    static int DMZ_Router = 1;
+    static int wifiRouter = 1;
 
-    public static Hashtable<String, Integer> input() {
+     void input() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Работни места общо: ");
-        int workspaces = Integer.parseInt(scanner.nextLine());
-        inputData.put("workspaces", workspaces);
+        workspaces = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Работни места на първи етаж: ");
-        int workspacesOnFirstFloor = Integer.parseInt(scanner.nextLine());
-        inputData.put("workspacesOnFirstFloor", workspacesOnFirstFloor);
+        workspacesOnFirstFloor = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Брой отдели на първи етаж: ");
-        int departmentsOnFirstFloor = Integer.parseInt(scanner.nextLine());
-        inputData.put("departmentsOnFirstFloor", departmentsOnFirstFloor);
+        departmentsOnFirstFloor = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Работни места на втори етаж: ");
-        int workspacesOnSecondFloor = Integer.parseInt(scanner.nextLine());
-        inputData.put("workspacesOnSecondFloor", workspacesOnSecondFloor);
+        workspacesOnSecondFloor = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Брой отдели на втори етаж: ");
-        int departmentsOnSecondFloor = Integer.parseInt(scanner.nextLine());
-        inputData.put("departmentsOnSecondFloor", departmentsOnSecondFloor);
+        departmentsOnSecondFloor = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Брой места отдалечени на 50 метра: ");
-        int wifiWorkspaces = Integer.parseInt(scanner.nextLine());
-        inputData.put("wifiWorkspaces", wifiWorkspaces);
-
-        return inputData;
+        wifiWorkspaces = Integer.parseInt(scanner.nextLine());
     }
 }

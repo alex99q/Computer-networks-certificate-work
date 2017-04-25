@@ -1,10 +1,13 @@
-import java.util.Hashtable;
-
 public class Startup {
     public static void main(String[] args) {
-        Hashtable<String, Integer> inputData = new Hashtable<>(DataInput.input());
+        DataInput data = new DataInput();
+        NetworkTable table = new NetworkTable();
+        FillTable fillTable = new FillTable();
 
-        NetworkTable table = new NetworkTable(inputData);
+        data.input();
+        table.generateMatrix();
+        table.setTableLabels();
+        fillTable.Devices();
         table.printTable();
     }
 }

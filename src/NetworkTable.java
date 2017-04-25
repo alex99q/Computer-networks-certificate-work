@@ -1,40 +1,21 @@
-import java.util.Hashtable;
-
 public class NetworkTable {
-
-    private int workspaces;
-    private int workspacesOnFirstFloor;
-    private int departmentsOnFirstFloor;
-    private int workspacesOnSecondFloor;
-    private int departmentsOnSecondFloor;
-    private int wifiWorkspaces;
-    private int DMZ_Router = 1;
-    private int wifiRouter = 1;
-
     private int matrixRows;
-    private int matrixCols;
-    private String[][] matrix;
+    private int matrixCols = Constants.matrixCols;
+    static String[][] matrix;
 
-    //constructor for initializing the NetworkTable
-    public NetworkTable(Hashtable<String, Integer> inputData){
-        workspaces = inputData.get("workspaces");
-        workspacesOnFirstFloor = inputData.get("workspacesOnFirstFloor");
-        departmentsOnFirstFloor = inputData.get("departmentsOnFirstFloor");
-        workspacesOnSecondFloor = inputData.get("workspacesOnSecondFloor");
-        departmentsOnSecondFloor = inputData.get("departmentsOnSecondFloor");
-        wifiWorkspaces = inputData.get("wifiWorkspaces");
+    void generateMatrix(){
+        matrixRows = DataInput.workspaces
+                    + DataInput.departmentsOnFirstFloor
+                    + DataInput.departmentsOnSecondFloor
+                    + DataInput.DMZ_Router
+                    + DataInput.wifiRouter
+                    + DataInput.wifiWorkspaces
+                    + Constants.firstRowWithLabelsInTable;
 
-        matrixRows = (workspaces + departmentsOnFirstFloor + departmentsOnSecondFloor + DMZ_Router + wifiRouter + wifiWorkspaces) + 1;
-        matrixCols = 6;
         matrix = new String[matrixRows][matrixCols];
     }
 
-    public void printTable() {
-        setTableLabels();
-        generateTable();
-    }
-
-    private void setTableLabels() {
+    void setTableLabels() {
         matrix[0][0] = "Device";
         matrix[0][1] = "Interface";
         matrix[0][2] = "Subnet";
@@ -47,7 +28,7 @@ public class NetworkTable {
                 matrix[row][col] = "-";
     }
 
-    private void generateTable() {
+    void printTable() {
         for (int row = 0; row < matrixRows; row++) {
             for (int col = 0; col < matrixCols; col++) {
                 if (row > 0) {
@@ -65,10 +46,5 @@ public class NetworkTable {
             }
             System.out.println();
         }
-    }
-
-    //A method for Filling the table
-    private void FillTable(){
-        //TODO: Write algorithm for filling the table
     }
 }

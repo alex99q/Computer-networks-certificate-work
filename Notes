@@ -1,0 +1,1 @@
+NetworkTable.java:12 - I think it should be const int = 6. Is there any reason to be global variable whose is initialized in method?

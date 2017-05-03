@@ -7,6 +7,7 @@ class DataInput {
     static int workspacesOnSecondFloor;
     static int departmentsOnSecondFloor;
     static int wifiWorkspaces;
+    static String addressClass;
     static int DMZ_Router = 1;
     static int wifiRouter = 1;
 
@@ -30,5 +31,8 @@ class DataInput {
 
         System.out.println("Брой места отдалечени на 50 метра: ");
         wifiWorkspaces = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("Адресен клас");
+        addressClass = scanner.nextLine();
     }
 }

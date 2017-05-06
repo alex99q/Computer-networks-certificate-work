@@ -8,6 +8,7 @@ public class Startup {
         table.generateMatrix();
         table.setTableLabels();
         fillTable.Devices();
+        fillTable.Interfaces();
         table.printTable();
     }
 }

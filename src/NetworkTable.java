@@ -1,5 +1,5 @@
 public class NetworkTable {
-    private int matrixRows;
+    static int matrixRows;
     private int matrixCols = Constants.matrixCols;
     static String[][] matrix;
 

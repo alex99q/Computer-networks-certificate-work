@@ -43,7 +43,11 @@ public class FillTable {
     }
 
     public void SubnetMask() {
+        String newSnM = generate.SubnetMask();
 
+        for (int row = 1; row < NetworkTable.matrixRows; row++) {
+            NetworkTable.matrix[row][4] = newSnM;
+        }
     }
 
     public void DefaultGateway() {

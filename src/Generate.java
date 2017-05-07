@@ -1,8 +1,9 @@
-import javax.xml.crypto.Data;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Generate {
+    IpTableMethods ipTableMethods = new IpTableMethods();
      List<String> Devices() {
         int departments =   DataInput.departmentsOnFirstFloor +
                             DataInput.departmentsOnSecondFloor +
@@ -66,8 +67,23 @@ public class Generate {
 
     }
 
-    public void SubnetMask() {
+    String SubnetMask() {
+        String addressClass = DataInput.addressClass; // get address class
+        int subnetCount = DataInput.departmentsOnFirstFloor + DataInput.departmentsOnSecondFloor + 1 + 1; // count subnet's
+        int subnetBits = ipTableMethods.countSnBits(subnetCount); // count subnet bits to modify
 
+        String newSnM = ipTableMethods.transformToSbnAddress(addressClass); // transform address class to subnet address
+        switch (addressClass) {
+            case "A":
+                break;
+            case "B":
+                break;
+            case "C":
+                newSnM += Integer.toString(Integer.parseInt(ipTableMethods.modifySnmC(subnetBits), 2));
+                break;
+        }
+
+        return newSnM;
     }
 
     public void DefaultGateway() {

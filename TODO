@@ -1,5 +1,6 @@
 1. IP table generator:
- - write algorithm that fills the tables in the class NetworkTable
+- fix wifi router generation
+- write algorithm that fills the tables in the class NetworkTable
 
 2. Types of computer networks:
   - read 1.1 from the assignment
